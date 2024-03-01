@@ -1,9 +1,102 @@
-<%- include('./partials/head') %>
+ <%- include('./partials/head') %>
 
-<h2>Students</h2>
+
+ <header>
+  <h1>Squadpage</h1>
+</header>
+
+<main>
+
+
+  <div class="shape"></div> 
+
+
+<article class="group">
+
+
+<article class="group-1">
+  <div class="students">
+     <div class="student-1"></div>
+  </div>
+
+  <div class="students">
+      <div class="student-2"></div>
+   </div>
+
+   <div class="students">
+      <div class="student-3"></div>
+   </div>
+
+</article>
+
+ <article class="group-2">
+  <div class="students">
+     <div class="student-4"></div>
+  </div>
+
+  <div class="students">
+      <div class="student-5"></div>
+   </div>
+
+   <div class="students">
+      <div class="student-6"></div>
+   </div>
+
+</article>
+
+
+<article class="group-3">
+  <div class="students">
+     <div class="student-1"></div>
+  </div>
+
+  <div class="students">
+      <div class="student-2"></div>
+   </div>
+
+   <div class="students">
+      <div class="student-3"></div>
+   </div> 
+
+</article> 
+
+</article> 
+
+</article>
+
+<article>
+
+  <h2>Berichten</h2>
+  <ul>
+    <% messages.forEach(message => { %> 
+      <li><%= message %></li> <% }) %>
+  </ul>
+
+<form method="POST" action="/">
+  <label> Typ hier je bericht
+    <textarea required name="bericht">
+    </textarea>
+  </label>
+  <button type="submit" >verstuurd</button>
+</form>
+
+</article>
+
+
+
+<div class="button">
+  <a href="#"> Kapsels</a>
+  <a href="#"> Avatar</a>
+</div>
+
+
+
+</main> 
+
+
 <ul>
   <% persons.forEach(person => { %>
-    <li><a href="./person/<%= person.id %>"><%= person.name %></a>, squad_id <%= person.squad_id %></li>
+    <li><a href="./person/<%= person.id %>"><%= person.name %></a>, <%= person.nickname %>, squad_id <%= person.squad_id %></li>
   <% }) %>
 </ul>
 

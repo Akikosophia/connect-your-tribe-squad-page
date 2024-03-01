@@ -4,6 +4,16 @@
 
 <h2><%= person.name %></h2>
 
+<!-- Hier heb ik een formulier gemaakt met de methode post  -->
+
+<form method="POST" action="/person/<%= person.id %>/like-or-unlike">
+    <% if (person.custom.like) { %>
+      <button type="submit" name="actie" value="niet-zo-leuk-sorry"> Unlike 💔</button>
+    <% } else { %>
+    <button type="submit" name="actie" value="leuk-hoor">Like ❤️</button>
+    <% } %>
+</form>
+
 <p>Squad: <%= person.squad_id %>
 
 <%- include('./partials/foot') %>
